@@ -1,0 +1,494 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	list-style: none;
+	text-decoration: none;
+}
+
+  @keyFrames colorchange{
+  	0%{
+  		background-color: red;
+      scale: 1;
+  	}
+
+  	100%{
+     background-color: yellow;
+      scale: 1.1;
+  	}
+  }
+
+  @keyFrames truckmove{
+  	0%{
+      left: -200px;
+
+  	}
+  	100%{
+  		left: 100%;
+  	}
+  }
+
+  @keyFrames wheelRotate{
+  	0%{
+  		rotate: 0deg;
+  	}
+  	100%{
+  		rotate: 360deg;
+  	}
+  }
+
+.truck{
+	position: fixed;
+	z-index: 999;
+  bottom: -10px;
+  left: -200px;
+  animation: truckmove 4s infinite linear;
+}
+
+.wheels{
+	display: flex;
+	position: relative;
+	justify-content: space-around;
+	top: -10px;
+}
+.wheels img{
+	animation: wheelRotate 3s 0s infinite linear;
+}
+
+.arrow{
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+}
+header{
+   position: sticky;	
+   top: 0px;
+   background-color: white;
+   box-shadow: 0px 2px 10px 0px #ccc;
+   z-index: 9;
+   
+}
+.headerMid{
+	max-width: 1170px;
+	margin: auto;
+	padding: 0px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.headerMid button{
+	padding: 10px 20px;
+	border: none;
+	background-color: blue;
+	border-radius: 25px 25px 0px 25px;
+	animation-name: colorchange;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+
+}
+.headerMid button a{
+  color: white;
+  font-size: 20px;
+}
+.mobileIcons{
+	display: none;
+}
+#bannerSection{
+   width: 100%;
+   background: url("image/banner.jpg") center;
+   background-size: cover;
+   background-attachment: fixed;
+   padding: 50px 0px;
+}
+.bannerMid{
+	max-width: 1170px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.bannerleft{
+	flex-basis: 60%;
+	color: white;
+	text-transform: uppercase;
+}
+.bannerleft h1{
+	font-size: 28px;
+	line-height: 40px;
+}
+.bannerleft h2{
+	font-size: 22px;
+	margin-top: 30px;
+	line-height: 40px;
+}
+.bannerleft h5{
+	font-size: 20px;
+	font-weight: normal;
+	margin-top: 30px;
+	line-height: 40px;
+}
+ .bannerForm{
+ 	flex-basis: 30%;
+
+}
+.bannerForm form{
+ 	background-color: white;
+ 	padding: 20px;
+   border-radius: 20px;
+}
+ .bannerForm form h3{
+ 	text-align: center;
+ 	padding-top: 20px;
+ }
+ .bannerForm form>input{
+   width: 100%;
+   padding: 8px;
+   margin-top: 10px;
+ }
+ .capcha{
+ 	display: flex;
+ 	margin-top: 20px;
+ 	justify-content: space-between;
+ 	gap: 30px;
+ }
+ .capcha input{
+ 	width:48%;
+ 	padding: 8px;
+ }
+ .capchaCode{
+ 	background-color: yellow;
+ 	flex-basis: 48%;
+ 	text-align: center;
+ 	padding: 8px 5px;
+ }
+ .bannerForm p{
+ 	font-size: 12px;
+ 	margin-top: 15px;
+ }
+ .bannerForm form button{
+ 	width: 100%;
+ 	margin-top: 15px;
+ 	padding: 10px;
+ 	background-color: blue;
+ 	font-size: 15px;
+ 	color: white;
+ }
+
+.PackingSection{
+	width: 100%;
+	padding: 40px 0px;
+}
+.PackingSection h2{
+	color: yellow;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+.PackingSection h2 span{
+	color: blue;
+}
+.PackingMid{
+	max-width: 1170px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+.PackingMid figure{
+	flex-basis: 31%;
+	margin: 1%;
+}
+.PackingMid figure iframe{
+	border-radius: 20px;
+}
+.PackingMid figcaption{
+	text-align: center;
+	color: blue;
+	font-size: 18px;
+}
+.Services{
+	width: 100%;
+	padding: 50px;
+	background-color: #ccc;
+}
+.Services h2{
+	display: flex;
+margin-bottom: 20px;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+  color: orange;
+}
+.Services h2 span{
+	color: #035fae;
+}
+.ServicesItmes{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+.ServicesGet{
+	width: 48%;
+	background-color: white;
+	text-align: center;
+	border-radius: 20px;
+	padding-bottom: 10px;
+	
+}
+.ServicesGet img{
+width: 100%;
+border-radius: 20px 20px 0px 0px;
+}
+.ServicesGet h3{
+	color: #035fae;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-top: 15px;
+}
+.ServicesGet p{
+	/*height: 150px;*/
+	color: #6c717b;
+	text-align: justify;
+	padding:  10px;
+	line-height: 20px;
+	text-transform: capitalize;
+}
+.ServicesGet button{
+	background-color: #ffcf40;
+	font-size: 16px;
+	font-weight: 700;
+	border: none;
+	padding: 10px 15px;
+	box-shadow: 0px 0px 10px 4px #ccc;
+	border-radius: 10px;
+}
+.PackShifts{
+	width: 100%;
+	background-color: white;
+	padding: 20px 40px;
+}
+.PackShifts h2{
+		display: flex;
+margin-bottom: 20px;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+  color: orange;
+  text-transform: uppercase;
+}
+.PackShifts h2 span{
+	color: #035fae;
+}
+.PackShifts h3{
+	text-align: center;
+	font-weight: 200;
+}
+.PackShiftsMid {
+ max-width: 1170px;
+ margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: white;
+	text-align: center;
+	
+}
+.PackShiftsMid figure{
+	flex-basis: 24%;
+	margin: 5px;
+	padding: 10px;
+	background-color:#f4f4f4;
+	border-radius: 20px;
+}
+.PackShifts figure h5{
+	text-transform: capitalize;
+	margin: 10px;
+}
+.Achievement{
+	background-color:  #035fae;
+	padding: 20px;
+}
+.Achievement h2{
+ 	display: flex;
+margin-bottom: 20px;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+  color: white;
+  text-transform: uppercase;
+}
+.Achievement h3{
+	text-align: center;
+	font-weight: 200;
+}
+.AchievementMid{
+	max-width: 1170px;
+	margin: auto;
+	display: flex;
+	padding: 20px;
+	margin: auto;
+	gap: 20px;
+}
+.AchievementMid figure{
+	flex-basis: 18%;
+	text-align: center;
+	color: white;
+}
+.AchievementMid figure p{
+	font-size: 18px;
+	font-weight: normal;
+	padding: 8px;
+}
+.AchievementMid figure  p h5{
+	font-size: 15px;
+}
+.Customers{
+  background-color: white;
+  padding: 40px;
+}
+.Customers h2{
+		display: flex;
+margin-bottom: 20px;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+  color: orange;
+  text-transform: uppercase;
+}
+.Customers h2 span{
+	color: #035fae;
+}
+.CustomersMid{
+	margin: auto;
+	max-width: 1170px;
+	display: flex;
+}
+.CustomersMid figure{
+	flex-basis: 20%;
+	background-color: #ffcf40;
+	position: absolute;
+	border-radius: 0px 20px 0px 20px;
+	margin: 5% 8%;
+	padding: 20px 30px;
+	color: white;
+}
+.CustomersMid figure img{
+   width: 100px;
+	background-size: cover;
+	align-items: center;
+}
+.CustomersMid>p{
+	max-width: 800px;
+	margin: auto;
+	/*position: relative;*/
+	background-color: #155ed1;
+	color: white;
+	padding: 100px 150px;
+	border-radius: 20px;
+}
+.Clients{
+	width: 100%;
+	background-color: #f4f4f4;
+	padding: 20px;
+}
+.Clients h2{
+		display: flex;
+margin-bottom: 20px;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+  color: orange;
+  text-transform: uppercase;
+}
+.Clients h2 span{
+	color: #035fae;
+}
+.ClientsMid{
+	max-width: 1170px;
+	margin: auto;
+	padding: 20px;
+	
+}
+.ClientsMid figure{
+  display: flex;
+  padding: 0px 25px;
+	gap: 20px;
+	box-sizing: border-box;
+}
+
+
+.ClientsMid figure img{
+	display: flex;
+	border-radius: 20px;
+	background-size: cover;
+}
+
+
+.Address{
+   width: 100%;
+	background-color: white;
+	padding: 40px;
+}
+.AddressMid>i{
+	color: yellow;
+	font-size: 20px;
+	margin-buttom: 15px;
+}
+.Address h2{
+		display: flex;
+margin-bottom: 20px;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+  color: orange;
+  text-transform: uppercase;
+}
+.Address h2 span{
+	color: #035fae;
+}
+.AddressMid{
+ width: 50%;
+ margin: auto;
+ background-color: #ccc;
+ text-align: center;
+ border-radius: 20px;
+ padding: 20px;
+}
+.AddressMid h3{
+	text-align: center;
+}
+.AddressMid p{
+	margin: 10px;
+}
+.AddressMid button{
+	padding: 10px 20px;
+	border: none;
+	background-color: blue;
+	border-radius: 25px 25px 0px 25px;
+}
+.AddressMid button a{
+  color: white;
+  font-size: 20px;
+}
+footer{
+	width: 100%;
+	padding: 20px;
+	background-color: #155ED1;
+}
+footer hr{
+	width: 1170px;
+	margin: auto;
+	color: white;
+}
+.footerMid{
+	max-width: 1170px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+.footerMid figure{
+	align-items: center;
+}
+.footerMid p a{
+	color: white;
+}
